@@ -53,13 +53,13 @@ height(
 	float u = newnuminu * 2 * Ad + Ad;
 	float v = newnuminv * 2 * Bd + Bd;
 	float d = ((deltau-u)/Ad)*((deltau-u)/Ad)+((deltav-v)/Bd)*((deltav-v)/Bd);
+	//changes the normal like how ovals changes the color
 	if(d != 0.)
 	{
 		normal n = normalize(N);
         N = calculatenormal(P+ d * n);
 	}
 	#define DISPLACEMENT_MAPPING
-
 	
 	if( TheHeight != 0. )
 	{
